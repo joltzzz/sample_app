@@ -70,11 +70,11 @@ Rails.application.configure do
   host = 'arcane-lowlands-62614.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-  :address => 'smtp.sendgrid.net',
+  :address => 'email-smtp.ap-southeast-1.amazonaws.com',
   :port => '587',
   :authentication => :plain,
-  :user_name => ENV['SENDGRID_USERNAME'],
-  :password => ENV['SENDGRID_PASSWORD'],
+  :user_name => ENV['AKIA5VJYNMKB2A2VUQ46'],
+  :password => ENV['BNbSA/BAI3J0jIjrAy9DsIjmha0Dulq50wjr0YfwzANy'],
   :domain => 'heroku.com',
   :enable_starttls_auto => true
   }
