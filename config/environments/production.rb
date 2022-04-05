@@ -73,11 +73,13 @@ Rails.application.configure do
   :address => 'email-smtp.ap-southeast-1.amazonaws.com',
   :port => '587',
   :authentication => :plain,
-  :user_name => ENV['AKIA5VJYNMKB2A2VUQ46'],
-  :password => ENV['BNbSA/BAI3J0jIjrAy9DsIjmha0Dulq50wjr0YfwzANy'],
+  :user_name => ENV['MAILER_USER_NAME'],
+  :password => ENV['MAILER_PASSWORD'],
   :domain => 'heroku.com',
   :enable_starttls_auto => true
   }
+# username AKIA5VJYNMKB2A2VUQ46
+# password BNbSA/BAI3J0jIjrAy9DsIjmha0Dulq50wjr0YfwzANy
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
