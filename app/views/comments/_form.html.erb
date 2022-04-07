@@ -1,0 +1,7 @@
+<form action="<%= micropost_comments_path(post)%>">
+    <input type="hidden" name="authenticity_token">
+
+    <textarea name="comment[content]" rows="4" cols="20"></textarea>
+    
+    <input type="submit" value="Submit">
+</form>
