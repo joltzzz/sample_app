@@ -1,8 +1,6 @@
 <% if @feed_items.any? %>
     <ol class="microposts">
         <%= render @feed_items %>
-        <%= render @micropost.comments.order(id: :desc)%>
-        <%= render partial: 'comments/form' locals: { post = @micropost } %>
     </ol>
     <%= will_paginate @feed_items, params: { controller: :static_pages, action: :home } %>
 <% end %>
