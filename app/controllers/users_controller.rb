@@ -61,11 +61,6 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
-  def comment
-    @micropost = Micropost.find(params[:id])
-    @micropost.all
-  end
-
   private
     def user_params
       params.require(:user).permit(:name, :email, :password,

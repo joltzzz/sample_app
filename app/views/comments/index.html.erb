@@ -1,0 +1,19 @@
+<h3>Micropost Details</h3><br />
+<div>
+    <strong>Post Content:</strong>
+    <%= @micropost.content %>
+</div>
+<br /><br />
+<strong><%= @micropost.comments.count %> Comments</strong>
+<br />
+<% @micropost.comments.each do |comment| %>
+    <%= comment.content %>
+    <%= link_to "Edit", edit_micropost_comment_path(@micropost, comment) %>
+
+    <%= link_to "Delete", micropost_comment_path(@micropost, comment), 
+    method: :delete, data: { confirm: "Are you sure?" } %>
+    <br />
+<% end %>
+<br/><br /><br />
+<%= render 'comments/form' %>
+<br/>

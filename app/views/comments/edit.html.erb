@@ -1,0 +1,10 @@
+<h3>Edit Comment</h3><br /><br />
+
+<%= form_with(model: [@micropost, @comment], local: true) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
+            
+            <%= f.label :content %>
+            <%= f.text_field :content, class: 'form-control' %>
+            
+            <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>

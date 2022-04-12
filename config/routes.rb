@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
-  get '/comment', to: 'users#comment'
 
   resources :users do
     member do
@@ -26,4 +25,5 @@ Rails.application.routes.draw do
   resources :microposts do
     resources :comments
   end
+  
 end
