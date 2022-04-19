@@ -26,12 +26,8 @@ class MicropostsController < ApplicationController
     def publish
         @micropost = Micropost.find(params[:id])
         @micropost.update(status: "published")
-        if @micropost.update
-            flash[:success] = "Post published!"
-            redirect_to root_url
-        else
-            flash[:danger] = "Error!"
-        end
+        flash[:success] = "Post published!"
+        redirect_to root_url
     end
 
     private
