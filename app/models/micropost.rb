@@ -1,4 +1,7 @@
 class Micropost < ApplicationRecord
+
+  enum status: { draft: "draft", published: "published" }
+
   belongs_to :user
   has_one_attached :image
   has_many :comments, dependent: :destroy

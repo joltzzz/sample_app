@@ -24,6 +24,9 @@ Rails.application.routes.draw do
 
   resources :microposts do
     resources :comments
+    member do
+      patch :publish
+    end
   end
   
 end

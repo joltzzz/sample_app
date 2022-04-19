@@ -13,5 +13,10 @@
         <% end %>
     </span>
 </li>
-
+Status: <%= micropost.status %><br />
 <%= link_to "Show", micropost_comments_path(micropost) %>
+<% if current_user?(micropost.user) %>
+    <% if micropost.status == 'draft' %>
+        <%= link_to "Publish", publish_micropost_path(micropost), method: :patch, data: { confirm: "Are you sure?" } %>
+    <% end %>
+<% end %>
